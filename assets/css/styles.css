@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin-top: 0%;
+    display: grid;
+    grid-template-areas:
+        "encabezado"
+        "componentes"
+    ;
+    grid-template-columns: 40%;
+    grid-template-rows: 30%;
+    justify-content: center;
+}
+
+#encabezado {
+    grid-area: encabezado;
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    gap: 5%;
+}
+
+#resultado {
+    height: 65%;
+    width: 90%;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: 10px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+#resultado::before {
+    content: attr(data-historial);
+    font-size: 20px;
+    color: gray;
+    align-self: flex-end;
+}
+
+#componentes {
+    grid-area: componentes;
+    border: solid black;
+    background-color: rgb(172, 171, 171);
+    display: grid;
+    grid-template-areas:
+        "numeros operaciones"
+    ;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 100%;
+}
+
+#numeros {
+    grid-area: numeros;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+.boton-numero {
+    height: 20%;
+    width: 120px;
+    font-size: 20px;
+}
+
+#operaciones {
+    grid-area: operaciones;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-operaciones {
+    height: 12%;
+    width: 120px;
+    border-radius: 100px;
+    background-color: blue;
+    font-size: 20px;
+    color: white;
+}
