@@ -2,95 +2,126 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     height: 100vh;
-    margin-top: 0%;
-    display: grid;
-    grid-template-areas:
-        "encabezado"
-        "componentes"
-    ;
-    grid-template-columns: 40%;
-    grid-template-rows: 30%;
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.calculator-container {
+    background: #333;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 350px;
 }
 
 #encabezado {
-    grid-area: encabezado;
-    border: solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-    gap: 5%;
+    margin-bottom: 20px;
+}
+
+#titulo {
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
 }
 
 #resultado {
-    height: 65%;
-    width: 90%;
-    background-color: black;
-    color: white;
-    font-size: 30px;
+    background: #1c1c1c;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 32px;
+    text-align: right;
+    margin-bottom: 20px;
+    min-height: 80px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     justify-content: center;
-    margin-left: 10px;
-    overflow-x: auto;
-    padding: 10px;
+    align-items: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 #resultado::before {
     content: attr(data-historial);
-    font-size: 20px;
-    color: gray;
-    align-self: flex-end;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
 }
 
 #componentes {
-    grid-area: componentes;
-    border: solid black;
-    background-color: rgb(172, 171, 171);
     display: grid;
-    grid-template-areas:
-        "numeros operaciones"
-    ;
-    grid-template-columns: 75% 25%;
-    grid-template-rows: 100%;
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
 }
 
 #numeros {
-    grid-area: numeros;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2%;
-}
-
-.boton-numero {
-    height: 20%;
-    width: 120px;
-    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 #operaciones {
-    grid-area: operaciones;
-    display: flex;
-    flex-direction: column;
-    gap: 2%;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    gap: 10px;
+}
+
+.boton-numero, 
+.boton-operaciones {
+    border: none;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.boton-numero {
+    background: #4a4a4a;
+    color: #fff;
+}
+
+.boton-numero:hover {
+    background: #5a5a5a;
+    transform: translateY(-2px);
 }
 
 .boton-operaciones {
-    height: 12%;
-    width: 120px;
-    border-radius: 100px;
-    background-color: blue;
-    font-size: 20px;
-    color: white;
+    background: #ff9500;
+    color: #fff;
+}
+
+.boton-operaciones:hover {
+    background: #ffaa33;
+    transform: translateY(-2px);
+}
+
+#boton-borrar-todo,
+#boton-borrar {
+    background: #ff3b30;
+}
+
+#boton-resultado {
+    background: #34c759;
+}
+
+@media (max-width: 400px) {
+    .calculator-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .boton-numero,
+    .boton-operaciones {
+        padding: 12px;
+        font-size: 18px;
+    }
 }

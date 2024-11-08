@@ -7,35 +7,37 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-    <header id="encabezado">
-        <h1 id="titulo">CASIO</h1>
-        <output id="resultado"></output>
-    </header>
-    <main id="componentes">
-        <div id="numeros">
-            <input id="boton1" class="boton-numero" type="button" value="1">
-            <input id="boton2" class="boton-numero" type="button" value="2">
-            <input id="boton3" class="boton-numero" type="button" value="3">
-            <input id="boton4" class="boton-numero" type="button" value="4">
-            <input id="boton5" class="boton-numero" type="button" value="5">
-            <input id="boton6" class="boton-numero" type="button" value="6">
-            <input id="boton7" class="boton-numero" type="button" value="7">
-            <input id="boton8" class="boton-numero" type="button" value="8">
-            <input id="boton9" class="boton-numero" type="button" value="9">
-            <input id="boton0" class="boton-numero" type="button" value="0">
-            <input id="boton00" class="boton-numero" type="button" value="00">
-            <input id="boton-punto" class="boton-numero" type="button" value=".">
-        </div>
-        <div id="operaciones">
-            <input id="boton-suma" class="boton-operaciones" type="button" value="+">
-            <input id="boton-resta" class="boton-operaciones" type="button" value="-">
-            <input id="boton-multiplicar" class="boton-operaciones" type="button" value="X">
-            <input id="boton-dividir" class="boton-operaciones" type="button" value="÷">
-            <input id="boton-resultado" class="boton-operaciones" type="button" value="=">
-            <input id="boton-borrar-todo" class="boton-operaciones" type="button" value="C">
-            <input id="boton-borrar" class="boton-operaciones" type="button" value="AC">
-        </div>
-    </main>
+    <div class="calculator-container">
+        <header id="encabezado">
+            <h1 id="titulo">CASIO</h1>
+            <output id="resultado"></output>
+        </header>
+        <main id="componentes">
+            <div id="numeros">
+                <input id="boton7" class="boton-numero" type="button" value="7">
+                <input id="boton8" class="boton-numero" type="button" value="8">
+                <input id="boton9" class="boton-numero" type="button" value="9">
+                <input id="boton4" class="boton-numero" type="button" value="4">
+                <input id="boton5" class="boton-numero" type="button" value="5">
+                <input id="boton6" class="boton-numero" type="button" value="6">
+                <input id="boton1" class="boton-numero" type="button" value="1">
+                <input id="boton2" class="boton-numero" type="button" value="2">
+                <input id="boton3" class="boton-numero" type="button" value="3">
+                <input id="boton0" class="boton-numero" type="button" value="0">
+                <input id="boton00" class="boton-numero" type="button" value="00">
+                <input id="boton-punto" class="boton-numero" type="button" value=".">
+            </div>
+            <div id="operaciones">
+                <input id="boton-borrar-todo" class="boton-operaciones" type="button" value="C">
+                <input id="boton-borrar" class="boton-operaciones" type="button" value="AC">
+                <input id="boton-suma" class="boton-operaciones" type="button" value="+">
+                <input id="boton-resta" class="boton-operaciones" type="button" value="-">
+                <input id="boton-multiplicar" class="boton-operaciones" type="button" value="×">
+                <input id="boton-dividir" class="boton-operaciones" type="button" value="÷">
+                <input id="boton-resultado" class="boton-operaciones" type="button" value="=">
+            </div>
+        </main>
+    </div>
     <script src="./assets/js/calculadora.js"></script>
 </body>
 </html>
